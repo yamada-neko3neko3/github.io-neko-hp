@@ -1,0 +1,514 @@
+/* スマートフォンの画面サイズ */
+@media (max-width: 480px) {
+    .container {
+      width: 100%;
+      
+    }
+    .section {
+      margin-top: 30px;
+      padding: 10px;
+    }
+
+    body{
+        overflow-x: hidden; /* 横スクロールを禁止 */
+        font-family: 'Zen Kaku Gothic New', sans-serif;
+          }
+    .logo{
+        z-index: 30;
+        width: 35%;
+        position: absolute;
+        position: fixed;
+        top: 0%;
+        left: 10%;
+        text-align: center;
+       
+    }
+  
+    .text1{
+      color: #ffffff;
+      z-index: 10;
+        position: absolute;
+        top: 35%;
+        left: 25%;
+        font-size: 20px;
+        
+        text-shadow: -0.5px -0.5px 4px rgba(0, 0, 0, 1);
+    }
+    .day365{
+      font-size: 50px;
+    }
+        
+        .animation{
+          position: absolute;
+        z-index: -20;
+        width: 180%;
+        position: absolute;
+        top: 70%;
+        left: 8%;
+
+          animation-timing-function: ease-in-out;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+          animation-duration: 1.5s;          
+        }
+        .keyframe3{
+          animation-name: anim_s;
+          transform: rotate(180deg);
+          animation-duration: 5s;
+        }
+        @keyframes anim_s {
+          50% {
+            transform: rotate(-30deg);
+          }
+          100% {
+            transform: rotate(30deg);
+          }
+        }
+    
+    .text2{
+      position:absolute;
+      top: 100%;
+      right: 5%;
+      font-size: 30px;
+      display: inline-block;
+      line-height: 0.1;
+      border-right: 5px solid rgb(0, 255, 21);
+      margin-right: 5px;
+      padding: 10px;
+    }
+    .text3{
+      position: absolute;
+      top: 110%;
+      left: 5%;
+    }
+    
+
+
+        .image3 {
+            z-index: -10;
+            width: 100%;
+            height: 90%;
+            position: absolute;
+            top: 165%;
+            background: linear-gradient(to right, #ffffff 20%, #00fd11 140%);
+          }
+
+          .work{
+            font-size: 40px;
+            position:absolute;
+            top: 165%;
+            left: 42%;
+            border-bottom: solid 5px red;
+          }
+          .icon1{
+            width: 30%;
+            position: absolute;
+            top: 180%;
+            left: 37%;
+          }
+         
+          .icon2{
+            width: 30%;
+            position: absolute;
+            top: 198%;
+            left: 37%;
+          }
+        
+          .icon3{
+            width: 30%;
+            position: absolute;
+            top: 217%;
+            left: 37%;
+          }
+        
+          .icon4{
+            width: 30%;
+            position: absolute;
+            top: 235%;
+            left: 37%;
+          }
+        
+
+          .company{
+            font-size: 30px;
+            position: absolute;
+            top: 265%;
+            left: 35%;
+          }
+          .company-overview{
+            position: absolute;
+            top: 280%;
+            left: 22%;
+          }
+          .item{
+            border-bottom: 1px solid #ddd;
+          }
+          dl, dt, dd {
+            margin: 0;
+            padding: 0;
+          /*   リセットCSS（適用するサイトで定義済なら不要） */
+          }
+          @media screen and (min-width: 560px) {
+            .company-overview .item {
+              display: grid;
+              /*項目名：名称の横幅比率*/
+              grid-template-columns: 1fr 5fr;
+              /*項目名：名称の間の余白*/
+              column-gap: 32px;
+              -webkit-column-gap: 32px;
+              -moz-column-gap: 32px;
+            }
+          }
+        
+          .copy{
+            position: absolute;
+            top: 330%;
+            left: 25%;
+          }
+
+          
+
+          /* フェードイン　*/
+          .icon1 .icon2 .icon3 .icon4 .company-overview{opacity: 1;} /*一瞬表示されるのを防ぐ*/
+.fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+.downup {transform: translateY(100px);}
+@keyframes fadeInDown {
+    0% {
+        opacity: 1;         
+    }
+    100% {
+    opacity: 1;
+    transform: translate(0);
+    }
+}
+
+          /*　HA メニュー　*/
+        
+          .HM{
+            z-index: 20;
+            position: absolute;
+            top: 0%;
+            right: 5%;
+        }   
+        #toggle { 
+            position: fixed;
+            border-radius: 10px;
+            top: 15px;
+            right: 15px;
+        border: solid 1px rgb(255, 208, 0);
+            padding: 5%;
+        background: yellow;
+        }
+        #toggle-box {
+            position: relative;
+            width: 6px;
+            height: 2px;
+            cursor: pointer;
+           
+        }
+        #toggle-box > span {
+          width: 100%;
+          height: 1px;
+          position: relative;
+          left: -6px;
+          display: block;
+          background: #b78300;
+          position: absolute;
+          transition: transform .6s ease-in-out, top .5s ease, bottom .5s ease;
+        }
+        
+        #toggle-box > span:nth-child(1) {    /*３本線*/
+            top: 10px;
+            width: 20px;
+        }
+        #toggle-box > span:nth-child(2) {
+            top: 50%;
+            transform: translatey(-50%);
+            width: 20px;
+        }
+        #toggle-box > span:nth-child(3) {
+            bottom: 10px;
+            width: 20px;
+        }
+        
+        
+        .is-open #toggle-box > span {   
+           background: rgb(255, 0, 0);
+        }
+        .is-open #toggle-box > span:nth-child(1) {    
+          top: 50%;
+          transform: rotate(45deg) translatey(-50%);
+        }
+        .is-open #toggle-box > span:nth-child(2) {
+          width: 0;
+        }
+        .is-open #toggle-box > span:nth-child(3) {
+          top: 50%;
+          transform: rotate(-45deg) translatey(-50%);
+        }
+        
+        /* z-index */
+        #toggle {
+            z-index: 1000;
+        }
+        #main {
+            position: relative;  
+            z-index: 990;
+        }
+        
+        #nav-content {    
+            z-index: 900;
+            overflow: auto;
+            width: 100%;
+            height: 15%;
+            background: #ffffff; 
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            text-align: center;
+            opacity: 0;
+            transition: opacity .8s ease, visibility .6s ease;
+            border-bottom: solid 3px rgb(255, 247, 0);
+        }
+        #nav-content ul {
+          list-style: none;
+          
+        }
+        #nav-content li {
+          display: inline-block;
+          margin-right: 10px;
+        }
+        .home{
+          color: rgb(167, 166, 166);
+          border-bottom: solid 3px rgb(128, 128, 128);
+        }
+        .info{
+          color: #e19bff;
+        }
+        #nav-content a {   
+          z-index: 20;
+          display: block;
+          position: relative;
+          width: 50%;
+          top: 53px;
+          right: 5%;
+          color: rgb(187, 190, 0);
+           /*リストの囲い
+          text-shadow: 1px 0 0 black,
+          0 1px 0 rgb(60, 61, 0),
+          -1px 0 0 rgb(60, 61, 0),
+          0 -1px 0 rgb(60, 61, 0); */
+          text-decoration: none;
+          font-size: 12px;
+          padding: 10px 0;
+          transition: opacity .6s ease;
+          pointer-events: none;
+        /*リストの囲い
+            padding: 3%;  
+            margin: 3%; 
+            border: double 5px #fbff00;
+            border-radius: 10px;
+            background: rgb(80, 68, 0);
+          */  
+        }
+       
+       /* .is-open {
+            overflow: hidden;
+        } HAメニュー開いた状態スクロール不可*/
+        .is-open #nav-content {
+          z-index: 999;
+          visibility: visible;
+          opacity: 1;
+        }
+        .is-open #nav-content a {
+          pointer-events: auto;
+        }
+
+        /* HAボタン押すと、ヘッダー出現*/
+        #hamburger-button.is-active {
+          position: absolute;
+          position: fixed;
+          top: 12%;
+          left: -7%;
+          width: 123%;
+          height: 3%;
+          padding: 10px;
+          opacity: 0.6;
+          border-bottom:solid 3px rgba(255, 255, 255);
+          background-color: #000000;  /* 適用したい背景色 */
+          transition: opacity .8s ease;
+        }
+
+        /* スライドショー　*/
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          list-style: none;
+        }
+        button {
+          cursor: pointer;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          vertical-align: middle;
+          color: inherit;
+          font: inherit;
+          border: 0;
+          background: transparent;
+          padding: 0;
+          margin: 0;
+          outline: none;
+          border-radius: 0;
+        }
+        .demo-title {
+          width: 100%;
+          padding: 1em;
+          text-align: right;
+          position: absolute;
+          z-index: 2;
+          font-size: 16px;
+          color: #fefefe;
+        }
+        /*********** ここまでベースCSS・リセットCSS ***********/
+        .fade-area {
+          width: 100%;
+          height: 600px;
+          position: relative;
+        }
+        /* object-fitを使用せず画像トリミングさせるためにbackgroundで指定 */
+        /* fade-areaに対してposition: absoluteで画像を重ねる */
+        .fade-list {
+          width: 100%;
+          height: 173%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+        @media screen and (max-width: 600px) {
+          .fade-area {
+            height: 300px;
+          }
+        }
+        .fade-list:nth-child(1) {
+          background-image: url(img/背景.png);
+          border-bottom: solid 3px rgb(255, 145, 0);
+        }
+        .fade-list:nth-child(2) {
+          background-image: url(img/背景2.png);
+          border-bottom: solid 3px rgb(127, 127, 127);
+        }
+        .fade-list:nth-child(3) {
+          background-image: url(img/背景3.png);
+          border-bottom: solid 3px rgb(26, 109, 0);
+        }
+        /* imgタグで画像指定したかったためclipで非表示指定（スクリーンリーダー対策） */
+        .fade-img {
+          width: 1px;
+          height: 1px;
+          clip: rect(1px, 1px, 1px, 1px);
+          -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+          margin: -1px;
+          padding: 0;
+          overflow: hidden;
+          position: absolute;
+        }
+        /*********** スライド補助エリア ***********/
+        .slide-summary {
+          max-width: 600px;
+          margin: 0 auto;
+          padding: 16px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        }
+        /*********** スライド送りボタン ***********/
+        /* 共有パーツ */
+        .btn-circle-fishy:hover {
+          -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+        }
+        .arow-wrap {
+          position: absolute;
+          top: 57%;
+          width: 140px;
+          display: flex;
+          justify-content: space-between;
+        }
+        .arrow-btn {
+          width: 28px;
+          height: 28px;
+          background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  /* サークルボタン　*/
+
+  display: inline-block;
+  text-decoration: none;
+  
+  font-weight: bold;
+  line-height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 5px #f88c8c;
+  border: solid 3px rgb(255, 255, 255);
+  transition: .4s;
+        }
+        .arrow-btn:hover {
+          border-style: dashed;
+        }
+        .arrow-btn:active {
+          -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
+          border-bottom: none;
+        }
+        /* プライマリー入力ディバイスがhoverを使える場合 */
+        @media (hover: hover) {
+          .arrow-btn:hover {
+            background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+          }
+        }
+        /*********** ページネーション ***********/
+        .pagination {
+          width: 150px;
+          display: flex;
+          justify-content: space-around;
+        }
+        .pagination-circle {
+          width: 20px;
+          height: 20px;
+          border-radius: 5%;
+          background-color: rgba(83, 97, 223, 0.3);
+          position: relative;
+        }
+        /* jsでtargetクラスがついたら背景色を変える */
+        .pagination-circle.target::before {
+          content: "";
+          width: 10px;
+          height: 10px;
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: rgba(83, 97, 223, 0.8);
+        }
+        
+    }
+
