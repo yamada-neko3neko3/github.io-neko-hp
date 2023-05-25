@@ -273,6 +273,20 @@
         }
         
         
+        .is-open #toggle-box > span {   
+           background: rgb(255, 0, 0);
+        }
+        .is-open #toggle-box > span:nth-child(1) {    
+          top: 50%;
+          transform: rotate(45deg) translatey(-50%);
+        }
+        .is-open #toggle-box > span:nth-child(2) {
+          width: 0;
+        }
+        .is-open #toggle-box > span:nth-child(3) {
+          top: 50%;
+          transform: rotate(-45deg) translatey(-50%);
+        }
         
         /* z-index */
         #toggle {
