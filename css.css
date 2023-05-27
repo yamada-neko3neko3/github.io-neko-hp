@@ -43,13 +43,13 @@
         z-index: -20;
         width: 80%;
         position: absolute;
-        top: 90%;
+        top: 100%;
         left: 10%;
 
           animation-timing-function: ease-in-out;
           animation-iteration-count: infinite;
           animation-direction: alternate;
-          animation-duration: 1.5s;          
+          animation-duration: 2.5s;          
         }
         .keyframe3{
           animation-name: anim_s;
@@ -169,13 +169,14 @@
           
 
           /* フェードイン　*/
-          .icon1 .icon2 .icon3 .icon4 .company-overview{opacity: 1;} /*一瞬表示されるのを防ぐ*/
+          .icon1 .icon2 .icon3 .icon4 .company-overview .keyframe3{opacity: 1;} /*一瞬表示されるのを防ぐ*/
 .fadeInDown {
     animation-name: fadeInDown;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
 .downup {transform: translateY(100px);}
+.slide-right {transform: translateX(200px);}
 @keyframes fadeInDown {
     0% {
         opacity: 1;         
